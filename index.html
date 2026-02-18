@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Welcome John 👋</h2>
+        <p>This is a simple HTML test page.</p>
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <br><br>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            var name = document.getElementById("name").value;
+            if(name === "") {
+                document.getElementById("output").innerHTML = "Please enter your name!";
+            } else {
+                document.getElementById("output").innerHTML = "Hello " + name + " 🚀";
+            }
+        }
+    </script>
+
+</body>
+</html>
 
